@@ -1,0 +1,47 @@
+Per tu perdorur API duhet krijuar nje User ne hhttp://localhost:3000/api/register,
+per regjistrim duhet te derguar nje JSON qe permban
+{  
+    emri: --,
+    email:--,
+    password:--
+}
+api i regjistron te dhenat ruhen dhe paswordi enkriptohet ,
+me pas duhet ber log in me te njejtat te dhena dhe mirret JWT token
+
+
+// Perdorimi i API te produkteve 
+
+Shtimi i nje produkti te ri:
+ne linkun (Post) http://localhost:3000/api/produkts/store dergojm nje  JSON me atributet
+{
+	"emri":"",
+	"permbajtja":"",
+	"kategoria":"",
+	"qmimi":
+}
+dhe ne header dergojm authentication token per me pas mundesi me access APIn
+
+Shikimi i te gjitha produkteve:
+dergojm nje Get ne http://localhost:3000/api/produkts, duhet perfshir edhe JWT
+
+Marrja e nje produkti me ID:
+dergojm nje Post request ne http://localhost:3000/api/produkts/show me nje JSON 
+{
+    "produktID":""
+} 
+duhet derguar edhe JWT
+
+Update te nje produkti:
+http://localhost:3000/api/produkts/update dergohet JSON me 
+{
+    "produktID":
+}
+dhe mund te shtojm cilat do atribute qe duam te ndryshojm ne ate Produkt,
+duhet te dergohet edhe JWT
+
+Delete produktin:
+http://localhost:3000/api/produkts/delete dergohet JSON me 
+{
+    "produktID":
+}
+duhet perfshir edhe JWT
